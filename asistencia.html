@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomar Asistencia - Sistema de Asistencia</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Asistencia</h1>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="registro.html">Registro</a>
+                <a href="historial.html">Historial</a>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="asistencia-controls">
+                <div class="form-group">
+                    <label for="cursoAsistencia">Seleccionar Materia:</label>
+                    <select id="cursoAsistencia" name="cursoAsistencia">
+                        <option value="">Seleccione una materia </option>
+                        <option value="programacion">Programación</option>
+                        <option value="algebra">Algebra</option>
+                        <option value="ingles">Ingles</option>
+                        <option value="arquitec">Arquitectura de computadora</option>
+                        <option value="analisis">Analisis Matematico</option>
+                        <option value="info">Informatica</option>
+                        <option value="edi">EDI</option>
+                    </select>
+                </div>
+                
+                <button id="iniciarAsistencia" class="btn-primary">Iniciar Toma de Asistencia</button>
+                <button id="detenerAsistencia" class="btn-secondary" disabled>Detener Asistencia</button>
+            </div>
+            
+            <div class="camera-section">
+                <h2>Cámara de Reconocimiento Facial</h2>
+                <div class="camera-container-large">
+                    <video id="videoAsistencia" autoplay playsinline></video>
+                    <canvas id="canvasAsistencia" style="display:none;"></canvas>
+                </div>
+                <div id="detectionInfo"></div>
+            </div>
+            
+            <div class="asistencia-resultados">
+                <h2>Asistencia Registrada</h2>
+                <div id="listaAsistencia"></div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Incluir la biblioteca face-api.js para reconocimiento facial -->
+    <script src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api@1.7.14/dist/face-api.min.js"></script>
+    <script src="js/asistencia.js"></script>
+</body>
+</html>

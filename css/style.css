@@ -1,0 +1,335 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*font-family: 'Times New Roman', Times, serif;*/
+    line-height: 1.6;
+    color: #333;
+    background-color: #d3d3d3;
+    
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Menú principal */
+.main-menu {
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 columnas en pantallas grandes */
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.menu-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 5px solid #3498db; /* Borde vertical de color azul (igual que el encabezado) */
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    font-size: 3em; /* Iconos más grandes */
+    margin-bottom: 10px;
+    color: #2c3e50; /* Color azul oscuro del encabezado */
+}
+
+.menu-card h2 {
+    color: #3498db; /* Color azul brillante para los títulos */
+    margin-bottom: 5px;
+}
+
+/* Formularios */
+.form-container {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 450px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 400px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Cámara */
+.camera-container {
+    max-width: 400px;
+    margin: 10px 0;
+}
+
+.camera-container-large {
+    max-width: 640px;
+    margin: 10px 0;
+}
+
+video, canvas {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.camera-controls {
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+}
+
+#capturaPreview {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#capturaPreview img {
+    max-width: 200px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Listas y tablas */
+.estudiantes-registrados, .asistencia-resultados, .historial-container {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.estudiante-item, .asistencia-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.estudiante-item:last-child, .asistencia-item:last-child {
+    border-bottom: none;
+}
+
+.estudiante-info, .asistencia-info {
+    flex-grow: 1;
+}
+
+.estudiante-codigo, .asistencia-codigo {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.estudiante-curso, .asistencia-fecha {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* Tabla de historial */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Controles de asistencia */
+.asistencia-controls {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.camera-section {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#detectionInfo {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    min-height: 50px;
+}
+
+/* Filtros */
+.filtros {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    color: #ffffff;
+    /*border-top: 1px solid #eee;*/
+    text-shadow: 0 0 6px #000000;
+}
+
+/* Estados */
+.estado-presente {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.estado-ausente {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .asistencia-controls, .filtros {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}

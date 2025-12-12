@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Asistencia - I.E.S. N° 11 </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistema de Asistencia con Reconocimiento Facial</h1>
+            <p>Instituto de Educacion Superior N° 11 - JUJUY </p>
+        </header>
+        <img
+            src="portada.jpg"
+            width="1000"
+            height="300"
+            style="display: block; margin: 0 auto;"
+            alt="Logo del instituto" />
+        <main class="main-menu">
+            <div class="menu-grid">
+                <div class="menu-card" onclick="location.href='registro.html'">
+                    <div class="card-icon">👤</div>
+                    <h2>Registro de Estudiantes</h2>
+                    <p>Registra nuevos estudiantes en el sistema con sus datos faciales</p>
+                </div>
+                
+                <div class="menu-card" onclick="location.href='asistencia.html'">
+                    <div class="card-icon">📷</div>
+                    <h2>Tomar Asistencia</h2>
+                    <p>Utiliza la cámara para registrar asistencia mediante reconocimiento facial</p>
+                </div>
+                
+                <div class="menu-card" onclick="location.href='historial.html'">
+                    <div class="card-icon">📊</div>
+                    <h2>Historial de Asistencia</h2>
+                    <p>Consulta el historial de asistencia de los estudiantes</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Instituto de Educacion Superior N° 11 - JUJUY - Sistema de Asistencia</p>
+        </footer>
+    </div>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>

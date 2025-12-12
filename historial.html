@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Asistencia - Sistema de Asistencia</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Historial de Asistencia</h1>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="registro.html">Registro</a>
+                <a href="asistencia.html">Tomar Asistencia</a>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="filtros">
+                <div class="form-group">
+                    <label for="filtroCurso">Filtrar por Materia:</label>
+                    <select id="filtroCurso" name="filtroCurso">
+                        <option value="">Todos los materias</option>
+                        <option value="programacion">Programación</option>
+                        <option value="algebra">Algebra</option>
+                        <option value="ingles">Ingles</option>
+                        <option value="arquitec">Arquitectura de computadora</option>
+                        <option value="analisis">Analisis Matematico</option>
+                        <option value="info">Informatica</option>
+                        <option value="edi">EDI</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="filtroFecha">Filtrar por Fecha:</label>
+                    <input type="date" id="filtroFecha" name="filtroFecha">
+                </div>
+                
+                <div class="form-group">
+                    <label for="filtroEstudiante">Filtrar por Estudiante:</label>
+                    <input type="text" id="filtroEstudiante" name="filtroEstudiante" placeholder="Código o nombre">
+                </div>
+                
+                <button id="aplicarFiltros" class="btn-primary">Aplicar Filtros</button>
+                <button id="exportarBtn" class="btn-secondary">Exportar a CSV</button>
+            </div>
+            
+            <div class="historial-container">
+                <h2>Registros de Asistencia</h2>
+                <div id="tablaHistorial"></div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/historial.js"></script>
+</body>
+</html>
